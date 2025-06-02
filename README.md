@@ -1,5 +1,3 @@
-This is a git repo intended to be published to github pages.
-
 ## Hugo Notes
 
 ### Commands
@@ -50,6 +48,26 @@ Hugo uses archetypes to define this default content. Example is archetypes/defau
 
 If the draft field set to true, Hugo will skip the page.
 
+### Content Blocks and Partials
+
+These are generated when a theme is created. They are located in themes/patrick/layouts/_default/, where patrick is the name of the theme generated.
+
+__baseof.html__ will be the base of every layout created. This pulls in _partials_ which are building blocks. 
+
+Hugo automatically creates some of these, but they are blank. THey are located in ` themes/patrick/layouts/partials/`. These created blocks are: 
+* head.html
+* header.html
+* footer.html
+Each of these is referenced in baseof.html.
+
+#### Including a partial
+
+```{{- partial "head.html" . -}}```
+
+Not the braces _and the dash_. The dash suppresses whitespace in the output. 
+
+When hugo creates a page such as index.html, it will use content/_index.md, theme/layouts/index.html and baseof.html to bring it all together. Same with a single page, but using theme/layouts/_default/single.html.
+
 ### Tasks completed
 
 Tasks:
@@ -58,3 +76,12 @@ Tasks:
   * created the content/_index.md file  <= This supplies the `.Content` to layouts/index.html
   * created about page with `hugo new about.md`
   * created layouts/_default/single.html
+* Chapter 2 - Building a basic theme
+  * `hugo new theme patrick` to create a theme
+  * moved layout files into theme
+    * `mv layouts/index.html themes/patrick/layouts/index.html`
+    * `mv layouts/_default/single.html themes/patrick/layouts/_default/single.html`
+  * added the theme to hugo.toml
+  * created partials head.html, header.html, and footer.html
+  * included these in the baseof.html
+  * created index.html layout in the theme
