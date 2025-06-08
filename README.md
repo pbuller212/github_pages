@@ -85,3 +85,6 @@ Tasks:
   * created partials head.html, header.html, and footer.html
   * included these in the baseof.html
   * created index.html layout in the theme
+  * created layouts/_default/baseof.html in themes directory
+  * created style.css
+  * updated head.html to include the css created above.
