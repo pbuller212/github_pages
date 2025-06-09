@@ -33,5 +33,7 @@
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/snippets/</loc>
   </url>
 </urlset>

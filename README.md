@@ -22,6 +22,8 @@ Can now goto http://localhost:1313 to view the site.
 
 ```hugo new about.md```
 
+```hugo new snippets/ssh-key-exchange.md```
+
 ### Layouts and Content Types
 
 In hugo, __layouts__ are the skeletons that define boilerplate code. __Content__ pages are combined with a layout to generate the web page. Layouts apply to certain type of content.
@@ -88,3 +90,7 @@ Tasks:
   * created layouts/_default/baseof.html in themes directory
   * created style.css
   * updated head.html to include the css created above.
+Chapter 3 - Adding content sections
+  * Created archetype "snippet"
+  * created and edited new snippet with `hugo new snippets/ssh-key-exchange.md`
+  * __But__ the page 404's at http://localhost:1313/snippets/ssh-key-exchange
